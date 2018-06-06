@@ -1,0 +1,104 @@
+@import '../../scss/variables.scss';
+
+ul li {
+  list-style: none;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.wrapper {
+  padding-top: 25px;
+  position: relative;
+  margin: 0 auto;
+  max-width: $container-max-width;
+}
+
+.movie-top {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  h1 {
+    margin-bottom: 25px;
+  }
+
+  h2 {
+    margin-bottom: 15px;
+  }
+
+  div {
+    padding-bottom: 25px;
+  }
+
+  .movie-description {
+    padding: 5px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+}
+
+.movie-overview {
+  width: 100%;
+}
+
+.movie-actors {
+  width: 100%;
+
+  ul.cast-list {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 70%;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      padding: 0 5px;
+      margin-bottom: 15px;
+
+      .cast__name {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        padding: 5px 0;
+      }
+
+      .cast__character {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.movie-genres {
+  ul {
+    li {
+      margin-bottom: 5px;
+      padding: 5px;
+      border-radius: 3px;
+      border: 1px solid #cfcfcf;
+      background-color: #fcfcfc;
+      text-align: center;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.trailer-wrapper {
+  width: 100%;
+  min-height: 350px;
+
+  .trailer-item {
+    min-height: 350px;
+
+    iframe {
+      min-height: 450px;
+    }
+  }
+}

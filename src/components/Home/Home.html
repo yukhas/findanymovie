@@ -1,0 +1,10 @@
+<div class="home-container">
+    <p>{{homeTitle}}</p>
+    <div>
+        <ul class="container">
+            <!-- <li v-for="movie in movies"> {{ movie.title }} </li> -->
+            <moviecard v-for="movie in movies" :key="movie.id" :id="movie.id" :title="movie.title" :overview="movie.overview" :poster="movie.poster_path">
+            </moviecard>
+        </ul>
+    </div>
+</div>

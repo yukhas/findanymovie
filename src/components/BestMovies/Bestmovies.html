@@ -1,0 +1,11 @@
+<div class="best-container">
+    <p>{{bestMoviesTitle}}</p>
+    <div>
+        <ul class="bestmovies-list">
+            <!-- <li v-for="bestmovie in bestmovies"> {{ bestmovie.title }} </li> -->
+            <moviecard v-for="bestmovie in bestmovies" :key="bestmovie.id" :id="bestmovie.id" :title="bestmovie.title" :overview="bestmovie.overview"
+                :poster="bestmovie.poster_path">
+            </moviecard>
+        </ul>
+    </div>
+</div>

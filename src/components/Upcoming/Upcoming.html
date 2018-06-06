@@ -1,0 +1,11 @@
+<div class="upcoming-container">
+    <p>{{upcomingMoviesTitle}}</p>
+    <div>
+        <ul class="upcoming-list">
+            <!-- <li v-for="bestmovie in bestmovies"> {{ bestmovie.title }} </li> -->
+            <moviecard v-for="upcomingMovie in upcoming" :key="upcomingMovie.id" :id="upcomingMovie.id" :title="upcomingMovie.title" :overview="upcomingMovie.overview"
+                :poster="upcomingMovie.poster_path">
+            </moviecard>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="short-card-wrapper">
+    <div class="short-card__img">
+        <img :src="`https://image.tmdb.org/t/p/w185/${poster}`" alt="">
+    </div>
+    <div class="short-card__description">
+        <h2>{{ title }}</h2>
+        <p>{{ overview }}</p>
+        <router-link :to="{ 'name': 'moviepage', 'params': { 'id': id } }">Подробнее</router-link>
+    </div>
+</div>

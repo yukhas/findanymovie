@@ -1,0 +1,42 @@
+<div class="wrapper">
+    <div class="movie-top">
+        <div class="row">
+            <div class="movie-poster">
+                <img :src="`https://image.tmdb.org/t/p/w300/${this.poster}`" alt="">
+            </div>
+            <div class="movie-description">
+                <h1>{{ this.title }}</h1>
+                <div class="movie-overview" v-if="this.overview">
+                    <h2>Описание</h2>
+                    <p>{{ this.overview}}</p>
+                </div>
+                <div class="movie-genres" v-if="this.genres">
+                    <h2>Жанры</h2>
+                    <ul>
+                        <li v-for="genre in genres" :key="genre.id">{{ genre.name }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="movie-actors" v-if="this.cast">
+                <h2>Актеры</h2>
+                <ul class="cast-list">
+                    <li v-for="actor in cast" :key="actor.id">
+                        <img :src="`https://image.tmdb.org/t/p/w138_and_h175_face/${actor.profile_path}`" :alt="actor.name">
+                        <span class="cast__name">{{actor.name}}</span>
+                        <span class="cast__character">{{actor.character}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="trailer-wrapper" v-if="this.trailers.length > 0">
+                <h2>Трейлеры</h2>
+                <div class="trailer-item" v-for="trailer in this.trailers" :key="trailer.id">
+                    <iframe width="100%" class="trailer-video" :src="`https://www.youtube.com/embed/${trailer.key}`" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
